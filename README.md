@@ -1,34 +1,37 @@
 # RAM 8x8 SystemVerilog Verification
 
-Project thiết kế và kiểm chứng RAM gồm 8 ô nhớ, mỗi ô chứa 8 bit.
+This project implements and verifies a RAM containing 8 memory locations, with each location storing 8 bits of data.
 
-## Chức năng
+## Features
 
-- Ghi dữ liệu vào RAM.
-- Đọc dữ liệu từ RAM.
-- Reset ngõ ra.
-- Kiểm tra bằng directed test và random test.
-- Sử dụng scoreboard, assertion và functional coverage.
+- Write data to the RAM.
+- Read data from the RAM.
+- Reset the output data.
+- Directed and random testing.
+- Self-checking scoreboard.
+- SystemVerilog Assertions.
+- Functional coverage.
 
 ## Files
 
-- `ram8x8design.sv`: Thiết kế RAM 8x8.
-- `tb8x8.sv`: Môi trường kiểm chứng SystemVerilog.
+- `ram8x8design.sv`: RAM 8x8 RTL design.
+- `tb8x8.sv`: SystemVerilog verification environment.
 
-## Công cụ
+## Tools
 
 - Cadence Xcelium 25.03
 - EDA Playground
 - EPWave
 
-## run
+## How to Run
 
-1. Chọn SystemVerilog/Verilog.
-2. Chọn Cadence Xcelium.
-3. Dán thiết kế vào `ram8x8design.sv`.
-4. Dán testbench vào `tb8x8.sv`.
-5.  Run.
+1. Select `SystemVerilog/Verilog`.
+2. Select `Cadence Xcelium`.
+3. Paste the RTL code into `ram8x8design.sv`.
+4. Paste the testbench code into `tb8x8.sv`.
+5. Click `Run`.
 
+## Expected Result
 
 ```text
 FINAL RESULT        : TEST PASSED
