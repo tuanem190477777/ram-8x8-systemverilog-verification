@@ -1,0 +1,32 @@
+`timescale 1ns/1ps
+
+module ram_8x8 (
+    input  logic       clk,
+    input  logic       rst_n,
+    input  logic       we,
+    input  logic       re,
+    input  logic [2:0] addr,
+    input  logic [7:0] wdata,
+    output logic [7:0] rdata
+);
+
+    logic [7:0] mem [0:7];
+    integer i;
+
+    always_ff @(posedge clk or negedge rst_n) begin
+        if (!rst_n) begin
+            rdata <= 8'h00;
+
+            for (i = 0; i < 8; i = i + 1)
+                mem[i] <= 8'h00;
+        end
+        else begin
+            if (we)
+                mem[addr] <= wdata;
+
+            if (re)
+                rdata <= mem[addr];
+        end
+    end
+
+endmodule
