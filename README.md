@@ -12,8 +12,8 @@ Project thiết kế và kiểm chứng RAM gồm 8 ô nhớ, mỗi ô chứa 8 
 
 ## Files
 
-- `design.sv`: Thiết kế RAM 8x8.
-- `testbench.sv`: Môi trường kiểm chứng SystemVerilog.
+- `ram8x8design.sv`: Thiết kế RAM 8x8.
+- `tb8x8.sv`: Môi trường kiểm chứng SystemVerilog.
 
 ## Công cụ
 
